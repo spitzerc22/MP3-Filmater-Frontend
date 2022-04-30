@@ -7,16 +7,16 @@ export default function NavBar () {
         <div className="navBar">
             <ul>
                 <li>
-                    <Link to="/">HOME</Link>
+                    <Link to="/" style={{ textDecoration: "none"}}>HOME</Link>
                 </li>
                 <li>
-                    <Link to="/genres">GENRES</Link>
+                    <Link to="/genres" style={{ textDecoration: "none"}}>GENRES</Link>
                 </li>
                 <li>
-                    <Link to="/submit">SUBMISSION</Link>
+                    <Link to="/submit" style={{ textDecoration: "none"}}>SUBMISSION</Link>
                 </li>
                 <li>
-                    <Link to="/login">LOGIN</Link>
+                    <Link to="/login" style={{ textDecoration: "none"}}>LOGIN</Link>
                 </li>
             </ul>
         </div>

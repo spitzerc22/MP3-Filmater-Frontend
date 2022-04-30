@@ -45,8 +45,93 @@
   justify-content: space-around;
 }
 
+
 .App h2 {
   padding-top: 10%;
   padding-left: 25%;
   padding-right: 25%;
+}
+
+.genreContainer {
+  padding: 3%;
+}
+.genreList h1{
+  border: 1px solid black;
+  padding: 10%;
+}
+
+.genreList {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.allMovies {
+  border: 1px solid black;
+  max-width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-left: 15%;  
+}
+
+.allMovies {
+  display: flex;  
+}
+
+
+.leftList {
+  width: 40%; 
+}
+
+.rightList {
+  width: 40%;
+}
+
+.fantasy:hover {
+  background-image: url("https://images.indianexpress.com/2017/12/lord-of-the-rings-759.jpg");
+  background-size: contain;
+  background-size: cover;
+  color: white;
+  height: 10%
+}
+
+.action:hover {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/QFuzEB2Gxth6qQT8Tpe7LN.jpg");
+  background-size: contain;
+  background-size: cover;
+  color: white;
+  height: 10%
+}
+
+.comedy:hover {
+  background-image: url("https://movierob.files.wordpress.com/2015/12/the-hangover.jpg?w=709");
+  background-size: contain;
+  background-size: cover;
+  color: white;
+  height: 10%
+}
+
+.family:hover {
+  background-image: url("https://miro.medium.com/max/1000/1*WSPqIysetGuUPX9AzfBTFg.jpeg");
+  background-size: cover;
+  height: 10%
+  
+}
+
+.thriller:hover {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--YV_xYMBl0VUqxp3HuuTbq8ZH81BJNInmS-94BkEDymWnLAQlq3DoU7dxMy2bTwNu_o&usqp=CAU");
+  background-size: contain;
+  background-size: cover;
+}
+
+.scifi:hover {
+  background-image: url("https://images.indianexpress.com/2017/12/lord-of-the-rings-759.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+.fantasy:hover {
+  background-image: url("https://images.indianexpress.com/2017/12/lord-of-the-rings-759.jpg");
+  background-size: contain;
+  background-size: cover;
 }
