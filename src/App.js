@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <h1>Filmater</h1>
+        <h1><Link to="/" style={{textDecoration: "none"}}>Filmater</Link></h1>
         
         <NavBar />
 

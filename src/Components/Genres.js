@@ -1,10 +1,11 @@
-
+import MovieGallery from "./MovieGallery"
+import {Link} from 'react-router-dom'
 
 export default function Genres () {
     return(
         <div className="genreContainer">
-            <div className="allMovies">
-                <h1>Browse All Movies!</h1>
+            <div>
+                <h1 className="allMovies">Browse All Movies!</h1>
             </div>
             <div className="genreList">
                 <div className="leftList">

@@ -1,9 +1,9 @@
 
 export default function Submission() {
     return(
-        <div>
-            <form>
-                <div>
+        <div className="formContainer">
+            <form className="submitForm">
+                <div className="genreForm">
                     <label htmlFor="genre">Genre</label>
                     <select name="genre" id="genre">
                         <option value="action">Action</option>
@@ -14,7 +14,7 @@ export default function Submission() {
                         <option value="scifi">Sci-Fi</option>
                     </select>
                 </div>
-                <div>
+                <div className="titleForm">
                     <label htmlFor="title">Movie Title</label>
                     <input 
                         className=""
@@ -24,7 +24,7 @@ export default function Submission() {
                         required
                     />
                 </div>
-                <div>
+                <div className="dateForm">
                     <label htmlFor="releaseDate">Release Year</label>
                     <input
                         className=""
@@ -34,7 +34,7 @@ export default function Submission() {
                         min="1940"
                     />
                 </div>
-                <div>
+                <div className="descriptionForm">
                     <label htmlFor="description">Description</label>
                     <input  
                         className=""

@@ -1,5 +1,12 @@
+* {
+  background-color: rgb(231, 218, 223);
+  color: black;
+  
+}
+
 .App {
   text-align: center;
+ 
 }
 
 .App-logo {
@@ -45,6 +52,11 @@
   justify-content: space-around;
 }
 
+.navBar {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
 
 .App h2 {
   padding-top: 10%;
@@ -53,7 +65,8 @@
 }
 
 .genreContainer {
-  padding: 3%;
+  padding: 2%;
+  
 }
 .genreList h1{
   border: 1px solid black;
@@ -74,8 +87,12 @@
   margin-left: 15%;  
 }
 
-.allMovies {
-  display: flex;  
+.allMovies:hover{
+  background-image: url("https://static1.colliderimages.com/wordpress/wp-content/uploads/movie-collage-2013-slice.jpg");
+  background-size: contain;
+  background-repeat: cover;
+  color: white;
+  height: 10%;
 }
 
 
@@ -112,26 +129,41 @@
 }
 
 .family:hover {
-  background-image: url("https://miro.medium.com/max/1000/1*WSPqIysetGuUPX9AzfBTFg.jpeg");
+  background-image: url("https://lumiere-a.akamaihd.net/v1/images/olaf_one_liners-header2_c8fff732.jpeg");
   background-size: cover;
-  height: 10%
-  
+  min-height:max-content;
+  color: white;
+  height: 10%;
 }
 
 .thriller:hover {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--YV_xYMBl0VUqxp3HuuTbq8ZH81BJNInmS-94BkEDymWnLAQlq3DoU7dxMy2bTwNu_o&usqp=CAU");
+  background-image: url("https://www.soundtrackmania.net/wp-content/uploads/2018/04/A-Quiet-Place-soundtrack.jpg");
   background-size: contain;
   background-size: cover;
+  color: white;
+  height: 10%;
 }
 
 .scifi:hover {
-  background-image: url("https://images.indianexpress.com/2017/12/lord-of-the-rings-759.jpg");
+  background-image: url("https://m.media-amazon.com/images/M/MV5BNzQ2Nzg5NDMwM15BMl5BanBnXkFtZTcwMTIwNTI4NA@@._V1_.jpg");
   background-size: contain;
   background-size: cover;
+  color: white;
+  height: 10%;
 }
 
 .fantasy:hover {
   background-image: url("https://images.indianexpress.com/2017/12/lord-of-the-rings-759.jpg");
   background-size: contain;
   background-size: cover;
+  color: white;
+  height: 10%;
 }
+
+.submitForm {
+  display: inline-block;
+  justify-content: space-evenly;
+  
+  
+}
+
