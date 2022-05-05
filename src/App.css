@@ -79,7 +79,7 @@
   justify-content: space-around;
 }
 
-.allMovies {
+.browseAll {
   border: 1px solid black;
   max-width: 70%;
   display: flex;
@@ -87,7 +87,7 @@
   margin-left: 15%;  
 }
 
-.allMovies:hover{
+.browseAll:hover{
   background-image: url("https://static1.colliderimages.com/wordpress/wp-content/uploads/movie-collage-2013-slice.jpg");
   background-size: contain;
   background-repeat: cover;

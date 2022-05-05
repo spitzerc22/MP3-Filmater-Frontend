@@ -1,5 +1,23 @@
+import {useEffect, useState} from 'react'
 
 export default function Submission() {
+    let [searchTerm, setSearchTerm] = useState('')
+    let [data, setData] = useState([])
+        
+    useEffect(() => {
+        const API_URL = process.env.API_URL
+        if (searchTerm) {
+        const fetchData = async () => {
+            const response = await fetch(API_URL + searchTerm)
+            const resData = await response.json()
+            if(resData.results.length > 0) {
+            setData(resData.results)
+            }
+        }
+        fetchData()
+    }
+    }, [searchTerm])
+   
     return(
         <div className="formContainer">
             <form className="submitForm">
@@ -11,7 +29,7 @@ export default function Submission() {
                         <option value="drama">Drama</option>
                         <option value="family">Family</option>
                         <option value="horror">Horror</option>
-                        <option value="scifi">Sci-Fi</option>
+                        <option value="scifi">SciFi</option>
                     </select>
                 </div>
                 <div className="titleForm">
@@ -43,7 +61,9 @@ export default function Submission() {
                         name="description"
                     />
                 </div>
+                <button>Submit</button>
             </form>
+            
         </div>
     )
 }

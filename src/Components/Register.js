@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom'
-import Register from './Register'
+import Login from './Login'
 
-export default function Login() {
+export default function Register() {
     return(
         <div>
-            <div className="loginContainer">
+            <div className="registerContainer">
                 <form>
                     <div className="username">
                         <label htmlFor="username">Username</label>
@@ -16,8 +16,8 @@ export default function Login() {
                             required
                         />
                     </div>
-                    <div className="password">
-                        <label htmlFor="password">Password</label>
+                    <div className="password1">
+                        <label htmlFor="password1">Password</label>
                         <input
                             className=""
                             type="text"
@@ -26,15 +26,25 @@ export default function Login() {
                             required
                         />
                     </div>
+                    <div className="password2">
+                        <label htmlFor="password2">Re-Enter Password</label>
+                        <input
+                            className=""
+                            type="text"
+                            id="password2"
+                            name="password2"
+                            required
+                        />
+                    </div>
                     <input className="btn" type="submit" value="Login"/>
                 </form>
-            </div>
-
-            <hr/>
-
-            <div className="registerHere">
-                <h6>Don't have an account? Register <Link to="/login/new">here!</Link></h6>
+                <hr/>
+                
+                <div className="goBack">
+                    <h6>Go back to Login <Link to="/login">here!</Link></h6>
+                </div>
             </div>
         </div>
     )
 }
+

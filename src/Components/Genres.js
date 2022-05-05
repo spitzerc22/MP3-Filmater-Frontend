@@ -5,7 +5,7 @@ export default function Genres () {
     return(
         <div className="genreContainer">
             <div>
-                <h1 className="allMovies">Browse All Movies!</h1>
+                <h1 className="browseAll">Browse All Submitted Movies!</h1>
             </div>
             <div className="genreList">
                 <div className="leftList">
@@ -16,7 +16,7 @@ export default function Genres () {
                 <div className="rightList">
                     <h1 className="family">Family</h1>
                     <h1 className="thriller">Thriller</h1>
-                    <h1 className="scifi">Sci-fi</h1>
+                    <h1 className="scifi">SciFi</h1>
                 </div>
         </div>
         </div>
