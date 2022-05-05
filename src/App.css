@@ -160,10 +160,34 @@
   height: 10%;
 }
 
-.submitForm {
+.formContainer {
+  border: 1px solid black;
+  max-width: 50%;
   display: inline-block;
-  justify-content: space-evenly;
-  
-  
+  margin-top: 8%;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  padding-right:2%;
+  padding-left: 2%
 }
 
+.loginContainer, .registerContainer {
+  border: 1px solid black;
+  max-width: 50%;
+  display: inline-block;
+  margin-top: 8%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right:2%;
+  padding-left: 2%;
+}
+.username, .password, .password1, .password2{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 15%;
+}
+
+hr {
+  max-width: 70%;
+}

@@ -1,6 +1,6 @@
 import './App.css';
-import { useEffect } from 'react'
-import {BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import React from 'react';
+import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
 import NavBar from './Components/NavBar'
 import Genres from './Components/Genres';
 import Home from './Components/Home';
@@ -9,12 +9,6 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 
 function App() {
-
-  useEffect(() => {
-    
-  })
-
-
   return (
     <div className="App">
       <Router>

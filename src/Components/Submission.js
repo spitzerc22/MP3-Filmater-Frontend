@@ -1,22 +1,22 @@
 import {useEffect, useState} from 'react'
 
 export default function Submission() {
-    let [searchTerm, setSearchTerm] = useState('')
-    let [data, setData] = useState([])
+    // let [searchTerm, setSearchTerm] = useState('')
+    // let [data, setData] = useState([])
         
-    useEffect(() => {
-        const API_URL = process.env.API_URL
-        if (searchTerm) {
-        const fetchData = async () => {
-            const response = await fetch(API_URL + searchTerm)
-            const resData = await response.json()
-            if(resData.results.length > 0) {
-            setData(resData.results)
-            }
-        }
-        fetchData()
-    }
-    }, [searchTerm])
+    // useEffect(() => {
+    //     const API_URL = process.env.API_URL
+    //     if (searchTerm) {
+    //     const fetchData = async () => {
+    //         const response = await fetch(API_URL + searchTerm)
+    //         const resData = await response.json()
+    //         if(resData.results.length > 0) {
+    //         setData(resData.results)
+    //         }
+    //     }
+    //     fetchData()
+    // }
+    // }, [searchTerm])
    
     return(
         <div className="formContainer">

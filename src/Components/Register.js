@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom'
-import Login from './Login'
 
 export default function Register() {
     return(
@@ -36,7 +35,7 @@ export default function Register() {
                             required
                         />
                     </div>
-                    <input className="btn" type="submit" value="Login"/>
+                    <input className="btn" type="submit" value="Register"/>
                 </form>
                 <hr/>
                 

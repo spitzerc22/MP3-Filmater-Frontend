@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import Register from './Register'
+
 
 export default function Login() {
     return(
@@ -28,13 +28,13 @@ export default function Login() {
                     </div>
                     <input className="btn" type="submit" value="Login"/>
                 </form>
-            </div>
-
-            <hr/>
+                <hr/>
 
             <div className="registerHere">
                 <h6>Don't have an account? Register <Link to="/login/new">here!</Link></h6>
             </div>
+            </div>
+
         </div>
     )
 }
