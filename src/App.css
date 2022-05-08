@@ -68,8 +68,8 @@
   padding: 2%;
   
 }
-.genreList h1{
-  border: 1px solid black;
+.genreList {
+  
   padding: 10%;
 }
 
@@ -95,13 +95,14 @@
   height: 10%;
 }
 
-
-.leftList {
-  width: 40%; 
+.leftList ul, .rightList ul{
+  list-style-type: none;
+  display: inline-block;
+  justify-content: space-between;
 }
-
-.rightList {
-  width: 40%;
+.leftList li, .rightList li{
+  border: 1px solid black;
+  
 }
 
 .fantasy:hover {
@@ -190,4 +191,31 @@
 
 hr {
   max-width: 70%;
+}
+
+.goBack {
+  border: solid black 1px;
+  display: flex;
+  justify-content: center;
+  max-width: 10%;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.movie_item{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid black 1px;
+  align-items: center;
+  margin-top: 2%;
+  padding-bottom: 2%;
+}
+
+.movie_header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid black 1px;
+  max-width: 80%;
+  margin-left: 11%;
+ 
 }

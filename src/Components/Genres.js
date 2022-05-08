@@ -1,28 +1,50 @@
 import MovieGallery from "./MovieGallery"
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+
 
 export default function Genres () {
-
-    const pickGenre = (e) => {
-        
-        console.log('you click on', e.target.id)
-        
-    }
+    let navigate = useNavigate();
     return(
+       
         <div className="genreContainer">
             <div>
-                <h1 className="browseAll" onClick={pickGenre}>Browse All Submitted Movies!</h1>
+                <Link to="/genres/browseAll" className="browseAll" element={<MovieGallery genre='browseAll'/>}>Browse All Submissions!</Link>
             </div>
             <div className="genreList">
                 <div className="leftList">
-                    <h1 className="action" id="action" onClick={pickGenre}>Action</h1>
-                    <h1 className="comedy" id="comedy" onClick={pickGenre}>Comedy</h1>
-                    <h1 className="fantasy" id="fantasy" onClick={pickGenre}>Fantasy</h1>
+                    {/* <div className='action' onClick={() => {navigate('/genres/action'
+                    )}}>Action</div> */}
+                    <ul>
+                        <li>
+                            <Link to="/genres/action" className="action">Action</Link>
+                        </li>
+                            
+                        <li>
+                            <Link to="/genres/comedy" className="comedy">Comedy</Link>
+                        </li>
+                            
+                        <li>
+                            <Link to="/genres/fantasy" className="fantasy">Fantasy!</Link>
+                        </li>
+                            
+                    </ul>
+                    
                 </div>
                 <div className="rightList">
-                    <h1 className="family" id="family" onClick={pickGenre}>Family</h1>
-                    <h1 className="thriller" id="thriller" onClick={pickGenre}>Thriller</h1>
-                    <h1 className="scifi" id="scifi" onClick={pickGenre}>SciFi</h1>
+                    <ul>
+                        <li>
+                            <Link to="/genres/family" className="family">Family</Link>
+                        </li>
+                            
+                        <li>
+                            <Link to="/genres/thriller" className="thriller">Thriller</Link>
+                        </li>
+                            
+                        <li>
+                            <Link to="/genres/scifi" className="scifi">Sci-Fi</Link>
+                        </li>
+                            
+                    </ul>
                 </div>
         </div>
         </div>

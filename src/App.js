@@ -7,6 +7,8 @@ import Home from './Components/Home';
 import Submission from './Components/Submission';
 import Login from './Components/Login';
 import Register from './Components/Register';
+import MovieGallery from './Components/MovieGallery';
+import cors from 'cors'
 
 function App() {
   return (
@@ -22,15 +24,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/genres" element={<Genres />}></Route>
+            <Route path="/genres/:genre" element={<MovieGallery />}></Route>
             <Route path="/submit" element={<Submission />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/login/new" element={<Register />}></Route>
           </Routes>
         </div>
       </Router>
-        
-
-      
     </div>
   );
 }

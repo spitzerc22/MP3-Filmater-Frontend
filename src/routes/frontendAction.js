@@ -10,7 +10,7 @@ class frontAction {
     }
 
     createMovie = (data) => {
-        return axios.post(`http://localhost:4242/submit`, data)
+        return axios.post(`http://localhost:4242/genres/submit`, data)
     }
 
     updateMovie = (genre, id, data) => {
@@ -18,7 +18,7 @@ class frontAction {
     }
     
     deleteMovie = (genre, id, data) => {
-        return axios.post(`http://localhost:4242/genres/${genre}/${id}`, data)
+        return axios.delete(`http://localhost:4242/genres/${genre}/${id}`, data)
     }
 }
 
