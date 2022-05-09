@@ -1,26 +1,30 @@
+import {useEffect, useState} from 'react'
+import axios from 'axios'
 import frontendAction from '../routes/frontendAction'
 
 export default function Submission() {
     
-   const submit = () => {
-       
-    frontendAction.createMovie({
-        title: document.body.title,
-        genre: document.body.genre,
-        releaseDate: document.body.releaseDate,
-        description: document.body.description,
-        pic: document.body.pic
-    })
-    .then((response) => {
-        console.log(response, "Success!")
-    })
-    .catch(err => {
-        console.log(err)
-    })
-   }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const data = {
+            title: document.body.title,
+            genre: document.body.genre,
+            pic: document.body.pic,
+            releaseDate: document.body.releaseDate,
+            description: document.body.description
+            
+        }
+        frontendAction.createMovie(data)
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
     return(
         <div className="formContainer">
-            <form className="submitForm">
+            <form className="submitForm" onSubmit={handleSubmit}>
                 <div className="genreForm">
                     <label htmlFor="genre">Genre</label>
                     <select name="genre" id="genre">
@@ -70,7 +74,7 @@ export default function Submission() {
                         name="description"
                     />
                 </div>
-                <button onClick={submit}>Submit</button>
+                <input type="submit" value="Submit"/>
             </form>
             
         </div>

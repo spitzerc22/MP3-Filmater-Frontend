@@ -1,8 +1,10 @@
 import {Link} from 'react-router-dom'
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useContext } from 'react'
 import frontendAction from '../routes/frontendAction'
+import AuthContext from '../context/AuthProvider'
 
 export default function Login() {
+    const {setAuth} = useContext(AuthContext)
     const userRef = useRef()
     
     const [user, setUser] = useState('')
@@ -13,15 +15,25 @@ export default function Login() {
         userRef.current.focus();
     }, [])
 
+//NEED MORE PRACTICE
     const handleSubmit = async (e) => {
         //prevent window auto refresh
         e.preventDefault()
-        console.log(user, pswd)
-        //clears input fields
-        setUser('')
-        setPswd('')
-        //for ternary
-        setSuccess(true)
+        try{
+            const response = await frontendAction.userLogin(JSON.stringify({username: user, password: pswd}), {
+                headers: { 'Content-Type': 'application/json'},
+                withCredentials: true
+            })
+            console.log(response)
+            //clears input fields
+            setUser('')
+            setPswd('')
+            //for ternary
+            setSuccess(true)
+        } catch(err) {
+            console.log(err)
+        }
+        
     }
 
     return(

@@ -1,24 +1,45 @@
 import {Link} from 'react-router-dom'
+import {useState, useRef} from 'react'
 import frontendAction from '../routes/frontendAction'
 
 export default function Register() {
-    const submit = () => {
-        frontendAction.createUser({
-            username: document.body.username,
-            password1: document.body.password1,
-            password2: document.body.password2
-        })
-        .then((res) => {
-            console.log(res, "Success!")
-        })
-        .catch(err => {
+    const userRef = useRef()
+    
+    const [user, setUser] = useState('')
+    const [pswd, setPswd] = useState('')
+    const [success, setSuccess] = useState(false)
+
+    const handleSubmit = async (e) => {
+        //prevent window auto refresh
+        e.preventDefault()
+        try{
+            const response = await frontendAction.createUser(JSON.stringify({username: user, password: pswd}), {
+                headers: { 'Content-Type': 'application/json'},
+                withCredentials: true
+            })
+            console.log(response)
+            //clears input fields
+            setUser('')
+            setPswd('')
+            //for ternary
+            setSuccess(true)
+        } catch(err) {
             console.log(err)
-        })
+        }
+        
     }
     return(
+        <>
+            {success ? (
+                <div>
+                    <h1>You're all set!</h1>
+                    <hr />
+                    <h4>Start browsing <Link to="/genres">here!</Link></h4>
+                </div>
+            ) : (
         <div>
             <div className="registerContainer">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="username">
                         <label htmlFor="username">Username</label>
                         <input
@@ -58,6 +79,8 @@ export default function Register() {
                 </div>
             </div>
         </div>
+            )}
+            </>
     )
 }
 

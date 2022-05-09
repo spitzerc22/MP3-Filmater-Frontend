@@ -24,9 +24,7 @@ export default function MovieGallery() {
         })
     }
     
-    const deleteMovie = () => {
-        console.log('delete button was lciked')
-    }
+  
 
     return(
         <div>
@@ -59,7 +57,7 @@ export default function MovieGallery() {
                     </div>
                     <div className="edit_btn">
                         <button >Edit</button>
-                        <button onClick={deleteMovie(movie._id)}>Delete</button>
+                        <button>Delete</button>
                     </div>
                     
                 </div>
