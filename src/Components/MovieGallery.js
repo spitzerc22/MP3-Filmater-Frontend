@@ -31,7 +31,7 @@ export default function MovieGallery() {
             <div className="goBack">
                 <Link to="/genres">Go Back To Genres</Link>
             </div>
-            <h1>{genre.toUpperCase()} MOVIES</h1>
+            <h1>{genre.toLocaleUpperCase()} MOVIES</h1>
             
             <header className="movie_header">
                 <div>Image</div>
@@ -50,7 +50,7 @@ export default function MovieGallery() {
                         <h2>{movie.title}, {movie.releaseDate}</h2>
                     </div>
                     <div className="movie_genre">
-                        {movie.genre.toUpperCase()}
+                        {movie.genre}
                     </div>
                     <div className="movie_description">
                         {movie.description}

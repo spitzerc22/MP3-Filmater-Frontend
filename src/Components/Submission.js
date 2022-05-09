@@ -74,7 +74,7 @@ export default function Submission() {
                         name="description"
                     />
                 </div>
-                <input type="submit" value="Submit"/>
+                <button value="submit">Submit</button>
             </form>
             
         </div>
