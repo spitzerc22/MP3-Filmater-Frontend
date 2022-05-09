@@ -1,23 +1,26 @@
-import {useEffect, useState} from 'react'
+import frontendAction from '../routes/frontendAction'
+import axios from 'axios'
 
 export default function Submission() {
-    // let [searchTerm, setSearchTerm] = useState('')
-    // let [data, setData] = useState([])
-        
-    // useEffect(() => {
-    //     const API_URL = process.env.API_URL
-    //     if (searchTerm) {
-    //     const fetchData = async () => {
-    //         const response = await fetch(API_URL + searchTerm)
-    //         const resData = await response.json()
-    //         if(resData.results.length > 0) {
-    //         setData(resData.results)
-    //         }
-    //     }
-    //     fetchData()
-    // }
-    // }, [searchTerm])
-   
+    
+   const submit = () => {
+       
+    frontendAction.createMovie({
+        title: document.body.title,
+        genre: document.body.genre,
+        releaseDate: document.body.releaseDate,
+        description: document.body.description,
+        pic: document.body.pic
+    })
+    .then((response) => {
+        console.log(response, "Success!")
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+      
+   }
     return(
         <div className="formContainer">
             <form className="submitForm">
@@ -42,6 +45,15 @@ export default function Submission() {
                         required
                     />
                 </div>
+                <div className="movie_pic">
+                    <label htmlFor='pic'>Picture</label>
+                    <input
+                        className=''
+                        type='text'
+                        id='pic'
+                        name='pic'
+                    />
+                </div>
                 <div className="dateForm">
                     <label htmlFor="releaseDate">Release Year</label>
                     <input
@@ -61,7 +73,7 @@ export default function Submission() {
                         name="description"
                     />
                 </div>
-                <button>Submit</button>
+                <button onClick={submit}>Submit</button>
             </form>
             
         </div>

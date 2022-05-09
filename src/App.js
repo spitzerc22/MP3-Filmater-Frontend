@@ -8,7 +8,7 @@ import Submission from './Components/Submission';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import MovieGallery from './Components/MovieGallery';
-import cors from 'cors'
+
 
 function App() {
   return (

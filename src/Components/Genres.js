@@ -5,7 +5,7 @@ import {Link, useNavigate} from 'react-router-dom'
 export default function Genres () {
     let navigate = useNavigate();
     return(
-       
+       //after swtiching from div to Link, it messed with display, needs a little CSS
         <div className="genreContainer">
             <div>
                 <Link to="/genres/browseAll" className="browseAll" element={<MovieGallery genre='browseAll'/>}>Browse All Submissions!</Link>
