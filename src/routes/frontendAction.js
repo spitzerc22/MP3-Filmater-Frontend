@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 class frontAction {
+    //MOVIES
     getAll = (genre) => {
         return axios.get(`http://localhost:4242/genres/${genre}`)
     }
@@ -19,6 +20,14 @@ class frontAction {
     
     deleteMovie = (genre, id, data) => {
         return axios.delete(`http://localhost:4242/genres/${genre}/${id}`, data)
+    }
+    //LOGIN
+    userLogin = (data) => {
+        return axios.post('http://localhost:4242/login', data)
+    }
+
+    createUser = (data) => {
+        return axios.post('http://localhost:4242/login/new', data)
     }
 }
 

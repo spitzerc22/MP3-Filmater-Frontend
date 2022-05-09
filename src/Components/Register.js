@@ -1,6 +1,20 @@
 import {Link} from 'react-router-dom'
+import frontendAction from '../routes/frontendAction'
 
 export default function Register() {
+    const submit = () => {
+        frontendAction.createUser({
+            username: document.body.username,
+            password1: document.body.password1,
+            password2: document.body.password2
+        })
+        .then((res) => {
+            console.log(res, "Success!")
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
     return(
         <div>
             <div className="registerContainer">
@@ -19,7 +33,7 @@ export default function Register() {
                         <label htmlFor="password1">Password</label>
                         <input
                             className=""
-                            type="text"
+                            type="password"
                             id="password"
                             name="password"
                             required
@@ -29,17 +43,17 @@ export default function Register() {
                         <label htmlFor="password2">Re-Enter Password</label>
                         <input
                             className=""
-                            type="text"
+                            type="password"
                             id="password2"
                             name="password2"
                             required
                         />
                     </div>
-                    <input className="btn" type="submit" value="Register"/>
+                    <button>Register</button>
                 </form>
                 <hr/>
                 
-                <div className="goBack">
+                <div className="goBackLogin">
                     <h6>Go back to Login <Link to="/login">here!</Link></h6>
                 </div>
             </div>

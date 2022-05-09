@@ -1,5 +1,4 @@
 import frontendAction from '../routes/frontendAction'
-import axios from 'axios'
 
 export default function Submission() {
     
@@ -18,8 +17,6 @@ export default function Submission() {
     .catch(err => {
         console.log(err)
     })
-
-      
    }
     return(
         <div className="formContainer">

@@ -1,8 +1,5 @@
-import { Axios } from 'axios';
 import {useState, useEffect} from 'react'
 import {Link, useParams} from 'react-router-dom'
-import ShowMovie from './ShowMovie'
-import axios from 'axios';
 import frontendAction from '../routes/frontendAction';
 
 
